@@ -1,0 +1,111 @@
+.top-bar {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+
+  @include content-padding-inline;
+
+  @include on-tablet {
+    padding-block: 50px;
+  }
+
+  &__logo {
+    width: 64px;
+    height: 46px;
+
+    @include on-tablet {
+      width: 87px;
+      height: 65px;
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(/src/images/The-met-logo-2x.png);
+
+    @include hover(transform, scale($transform-scale));
+  }
+
+  &__right-side {
+    display: flex;
+    position: relative;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    @include on-tablet {
+      gap: 32px;
+    }
+  }
+
+  &__phone-numbers {
+    opacity: 0;
+    pointer-events: none;
+
+    top: 130%;
+    right: 30%;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 16px;
+    width: 201px;
+    height: 116px;
+
+    transition: all $transform-time;
+    transform: translateY(-40%);
+
+    @include on-tablet {
+      transform: translateX(40%);
+    }
+
+    @include on-tablet {
+      top: -30%;
+      right: 100%;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    &:checked ~ .top-bar__phone-numbers {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+
+      @include on-tablet {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: $main-white-color;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    text-transform: uppercase;
+    transition: $transform-time;
+
+    &:active {
+      transform: scale($transform-scale);
+    }
+
+    @include on-tablet {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  &--stiky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $main-red-color;
+  }
+}

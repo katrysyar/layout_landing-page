@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url(../images/header-img-mobile-2x.png);
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    margin: 0;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    color: $main-white-color;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+
+    @include on-tablet {
+      font-size: 64px;
+      width: 392px;
+      height: 128px;
+      top: 40%;
+    }
+
+    @include on-desktop {
+      font-size: 80px;
+      width: 498px;
+      height: 160px;
+    }
+  }
+}

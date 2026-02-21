@@ -1,0 +1,45 @@
+.now-on-view {
+  &__grid-wrapper {
+    @include on-tablet {
+      @include grid-set-up(6, 10px);
+    }
+
+    @include on-desktop {
+      @include grid-set-up(12, 10px);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    padding-bottom: 8px;
+
+    @include on-tablet {
+      font-size: 48px;
+      grid-column: 1/-1;
+    }
+  }
+
+  &__subtext {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 48px;
+
+    @include on-tablet {
+      grid-column: 2/6;
+    }
+
+    @include on-desktop {
+      grid-column: 5/9;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

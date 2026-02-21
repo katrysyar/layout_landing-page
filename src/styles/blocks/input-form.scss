@@ -1,0 +1,40 @@
+.input-form {
+  @include grid-set-up(2, 16px);
+
+  gap: 16px;
+  padding-top: 44px;
+
+  &__area {
+    grid-column: 1/-1;
+    border: 1px solid #f8f8fa;
+    background-color: #f8f8fa;
+    color: $main-grey-color;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-block: 14px;
+    border-radius: 0;
+
+    &--textarea {
+      height: 144px;
+      resize: none;
+    }
+
+    &:hover {
+      color: $main-dark-color;
+      border-color: $hover-grey-color;
+    }
+
+    &:focus {
+      color: $main-dark-color;
+      border-color: $main-dark-color;
+    }
+  }
+
+  &__button {
+    grid-column: 1/-1;
+    margin-top: 16px;
+    max-width: 411px;
+  }
+}

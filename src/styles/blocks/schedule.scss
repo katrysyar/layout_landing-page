@@ -1,0 +1,35 @@
+.schedule {
+  @include grid-set-up(2, 20px);
+
+  padding-top: 32px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: $padding-block-sections;
+    grid-column: 1/-1;
+  }
+
+  &__list {
+    list-style: none;
+
+    &--hours {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &--days {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    padding-block: 8px;
+  }
+
+  &__note {
+    padding-top: $padding-block-sections;
+    grid-column: 1/-1;
+  }
+}

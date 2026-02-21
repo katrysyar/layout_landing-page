@@ -1,0 +1,51 @@
+.museum-hours {
+  @include grid-set-up(2, 24px);
+
+  @include on-tablet {
+    --columns: 6;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+  }
+
+  &__item {
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      grid-column: 4/-1;
+    }
+
+    @include on-desktop {
+      grid-column: 6/-1;
+    }
+  }
+
+  &__sign {
+    @include on-tablet {
+      grid-column: 1/3;
+    }
+
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: $main-red-color;
+  }
+
+  &__title {
+    grid-column: 1/-1;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: left;
+
+    @include on-tablet {
+      grid-column: 1/3;
+      font-size: 48px;
+    }
+
+    @include on-desktop {
+      grid-column: 1/6;
+    }
+  }
+}

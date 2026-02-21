@@ -1,0 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page:has(.menu:target) {
+  overflow: hidden;
+}
+
+.body {
+  min-width: 320px;
+  font-family: Cinzel, 'Courier New', Courier, monospace;
+  color: $main-dark-color;
+}
+
+// reset-block
+body,
+h1,
+h2,
+h3,
+h4,
+h6,
+ul,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
