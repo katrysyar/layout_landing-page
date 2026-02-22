@@ -6,8 +6,8 @@
 
   &__area {
     grid-column: 1/-1;
-    border: 1px solid #f8f8fa;
-    background-color: #f8f8fa;
+    border: 1px solid $form-bcg-color;
+    background-color: $form-bcg-color;
     color: $main-grey-color;
     font-family: inherit;
     font-weight: 400;
@@ -15,10 +15,18 @@
     padding-left: 10px;
     padding-block: 14px;
     border-radius: 0;
+    max-width: 401px;
 
     &--textarea {
       height: 144px;
       resize: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px $form-bcg-color inset !important;
     }
 
     &:hover {

@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(/src/images/The-met-logo-2x.png);
+    background-image: url(/src/images/The-met-logo.svg);
 
     @include hover(transform, scale($transform-scale));
   }
@@ -91,6 +91,7 @@
     line-height: 22px;
     text-transform: uppercase;
     transition: $transform-time;
+    cursor: pointer;
 
     &:active {
       transform: scale($transform-scale);
